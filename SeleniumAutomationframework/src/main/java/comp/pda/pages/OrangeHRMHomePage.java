@@ -16,22 +16,17 @@ public final class OrangeHRMHomePage extends BasePage{
 	private final By linkdropdown = By.xpath(".//*[@class='oxd-icon bi-caret-down-fill oxd-userdropdown-icon']");
 	
 	public OrangeHRMHomePage clickWelcome() {
-		DriverManager.getDriver().findElement(linkWelcome).click();
+		click(linkWelcome, "clickable");
 		return this;
 	}
 	
 	public OrangeHRMLoginPage clickLogout() {
-		
-		new WebDriverWait(DriverManager.getDriver(),10)
-				.until(ExpectedConditions.elementToBeClickable(linklogout));
-		
-		Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
-		DriverManager.getDriver().findElement(linklogout).click();
+		click(linklogout,"present");
 		return new OrangeHRMLoginPage();
 	}
 	
 	public OrangeHRMHomePage clickDropdown() {
-		DriverManager.getDriver().findElement(linkdropdown).click();
+		click(linkdropdown,"clickable");
 		return this;
 	}
 	

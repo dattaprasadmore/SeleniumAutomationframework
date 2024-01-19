@@ -2,8 +2,6 @@ package comp.pda.pages;
 
 import org.openqa.selenium.By;
 
-import com.pda.driver.DriverManager;
-
 public final class OrangeHRMLoginPage extends BasePage {
 
 	private final By textboxUserName = By.xpath(".//input[@name='username']");
@@ -12,22 +10,22 @@ public final class OrangeHRMLoginPage extends BasePage {
 	
 	
 	public OrangeHRMLoginPage enterUserName(String username) {
-		DriverManager.getDriver().findElement(textboxUserName).sendKeys(username);
+		sendKeys(textboxUserName, username, "present");
 		return this;
 	}
 	
 	public OrangeHRMLoginPage enterPassword(String password) {
-		DriverManager.getDriver().findElement(textboxPassword).sendKeys(password);
+		sendKeys(textboxPassword, password,"present");
 		return this;
 	}
 	
 	public OrangeHRMHomePage clickLogin() {
-		click(buttonLogin);
+		click(buttonLogin,"present");
 		return new OrangeHRMHomePage();
 	}
 	
 	public String getTitle() {
-		return DriverManager.getDriver().getTitle();
+		return getPageTitle();
 	}
 	
 

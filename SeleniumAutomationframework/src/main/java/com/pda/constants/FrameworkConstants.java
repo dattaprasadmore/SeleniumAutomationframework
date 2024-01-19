@@ -7,7 +7,12 @@ public final class FrameworkConstants {
 	private static final String RESOURCESPATH = System.getProperty("user.dir")+"/src/test/resources";
 	private static final String CHROMEDRIVERPATH= RESOURCESPATH + "/executables/chromedriver.exe";
 	private static final String CONFIGFILEPATH = RESOURCESPATH + "/config/config.properties";
+	private static final int EXPLICITWAIT = 10;
 	
+	public static int getExplicitwait() {
+		return EXPLICITWAIT;
+	}
+
 	private static final String URL = "https://www.google.com";
 	
 	public static String getChromedriverPath() {
