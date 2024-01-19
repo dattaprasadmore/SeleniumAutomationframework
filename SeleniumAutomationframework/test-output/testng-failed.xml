@@ -3,21 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="com.pda.tests.LoginpageTests">
+      <class name="com.pda.tests.OrangeHRMTests">
         <methods>
-          <include name="test2"/>
-          <include name="SetUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.pda.tests.LoginpageTests -->
-      <class name="com.pda.tests.HomePageTests">
-        <methods>
+          <include name="LoginLogoutTest"/>
           <include name="tearDown"/>
           <include name="SetUp"/>
-          <include name="test3"/>
-          <include name="test4"/>
         </methods>
-      </class> <!-- com.pda.tests.HomePageTests -->
+      </class> <!-- com.pda.tests.OrangeHRMTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
