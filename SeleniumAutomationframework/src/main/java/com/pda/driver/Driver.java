@@ -2,6 +2,7 @@ package com.pda.driver;
 
 import java.io.IOException;
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,6 +25,8 @@ public final class Driver {
 			//WebDriver driver = new ChromeDriver(); // Ctrl+Shift+O
 			DriverManager.setDriver(new ChromeDriver());
 			DriverManager.getDriver().get(ReadPropertyFile.get("url"));
+			//DriverManager.getDriver().manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+			DriverManager.getDriver().manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		}
 	}
 
