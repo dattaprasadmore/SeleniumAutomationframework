@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-01-19T23:32:53 IST" name="Suite" finished-at="2024-01-19T23:33:06 IST" duration-ms="12551">
+  <suite started-at="2024-01-20T16:30:10 IST" name="Default suite" finished-at="2024-01-20T16:30:37 IST" duration-ms="26734">
     <groups>
     </groups>
-    <test started-at="2024-01-19T23:32:53 IST" name="Test" finished-at="2024-01-19T23:33:06 IST" duration-ms="12551">
+    <test started-at="2024-01-20T16:30:10 IST" name="Default test" finished-at="2024-01-20T16:30:37 IST" duration-ms="26734">
       <class name="com.pda.tests.OrangeHRMTests">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.pda.tests.OrangeHRMTests@5fbdfdcf]" started-at="2024-01-19T23:32:53 IST" name="SetUp" finished-at="2024-01-19T23:33:01 IST" duration-ms="8051" status="PASS">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.pda.tests.OrangeHRMTests@71def8f8]" started-at="2024-01-20T16:30:10 IST" name="SetUp" finished-at="2024-01-20T16:30:31 IST" duration-ms="21242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="LoginLogoutTest()[pri:0, instance:com.pda.tests.OrangeHRMTests@5fbdfdcf]" started-at="2024-01-19T23:33:01 IST" name="LoginLogoutTest" finished-at="2024-01-19T23:33:05 IST" duration-ms="3786" status="PASS">
+        <test-method signature="LoginLogoutTest()[pri:0, instance:com.pda.tests.OrangeHRMTests@71def8f8]" started-at="2024-01-20T16:30:31 IST" name="LoginLogoutTest" finished-at="2024-01-20T16:30:36 IST" duration-ms="4737" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginLogoutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.pda.tests.OrangeHRMTests@5fbdfdcf]" started-at="2024-01-19T23:33:05 IST" name="tearDown" finished-at="2024-01-19T23:33:06 IST" duration-ms="657" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.pda.tests.OrangeHRMTests@71def8f8]" started-at="2024-01-20T16:30:36 IST" name="tearDown" finished-at="2024-01-20T16:30:37 IST" duration-ms="673" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.pda.tests.OrangeHRMTests -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

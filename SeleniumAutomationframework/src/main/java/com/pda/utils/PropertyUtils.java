@@ -8,31 +8,30 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Properties;
 
+import com.pda.Enum.ConfigProperties;
 import com.pda.constants.FrameworkConstants;
 
-public final class ReadPropertyFile {
+public final class PropertyUtils {
 
-	private ReadPropertyFile() {
-		
+	private PropertyUtils() {
+
 	}
-	
+
 	private static Properties property = new Properties();
-	private static final Map<String,String> CONFIGMAP = new HashMap<>();
-	
+	private static final Map<String, String> CONFIGMAP = new HashMap<>();
+
 	static {
 		try {
 			FileInputStream file = new FileInputStream(FrameworkConstants.getConfigfilepath());
 			property.load(file);
-			
-			for(Object key : property.keySet()) {
+
+			for (Object key : property.keySet()) {
 				CONFIGMAP.put(String.valueOf(key), String.valueOf(property.get(key)));
 			}
-			
-		}
-		catch(FileNotFoundException e) {
+
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		}
-		catch(IOException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
@@ -40,22 +39,21 @@ public final class ReadPropertyFile {
 // Property file would work like Hashtable 
 //	Hashtable - little slow but Threadsafe
 // Converting a Property to HashMap need some time
-	
-	public static String get(String key) throws Exception {
-		if(Objects.isNull(key)||Objects.isNull(CONFIGMAP.get(key))) {
+
+	public static String get(ConfigProperties key) throws Exception {
+		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key))) {
 			throw new Exception("Property name " + key + " is not found. Please check config.properties");
 		}
-		return CONFIGMAP.get(key);
+		return CONFIGMAP.get(key.name().toLowerCase());
 	}
-	
-	/*public static String getValue(String key) throws Exception {
-		String value = "";
-		value = property.getProperty(key);
-		if(Objects.isNull(value)) {
-			throw new Exception("Property name " + key + " is not found. Please check config.properties");
-		}
-		
-		return property.getProperty(key);
-	}*/
-	
+
+	/*
+	 * public static String getValue(String key) throws Exception { String value =
+	 * ""; value = property.getProperty(key); if(Objects.isNull(value)) { throw new
+	 * Exception("Property name " + key +
+	 * " is not found. Please check config.properties"); }
+	 * 
+	 * return property.getProperty(key); }
+	 */
+
 }
