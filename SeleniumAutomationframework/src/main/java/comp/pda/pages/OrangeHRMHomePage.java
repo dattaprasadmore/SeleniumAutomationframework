@@ -1,14 +1,9 @@
 package comp.pda.pages;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.google.common.util.concurrent.Uninterruptibles;
 import com.pda.Enum.WaitStrategy;
-import com.pda.driver.DriverManager;
+import com.pda.reports.ExtentManager;
+import com.pda.reports.ExtentReport;
 
 public final class OrangeHRMHomePage extends BasePage{
 
@@ -18,16 +13,19 @@ public final class OrangeHRMHomePage extends BasePage{
 	
 	public OrangeHRMHomePage clickWelcome() {
 		click(linkWelcome, WaitStrategy.PRESENCE);
+		ExtentManager.getExtentTest().pass("Welcome Clicked");
 		return this;
 	}
 	
 	public OrangeHRMLoginPage clickLogout() {
 		click(linklogout,WaitStrategy.CLICKABLE);
+		ExtentManager.getExtentTest().pass("Logout Clicked");
 		return new OrangeHRMLoginPage();
 	}
 	
 	public OrangeHRMHomePage clickDropdown() {
 		click(linkdropdown,WaitStrategy.PRESENCE);
+		ExtentManager.getExtentTest().pass("Dropdown Clicked");
 		return this;
 	}
 	
