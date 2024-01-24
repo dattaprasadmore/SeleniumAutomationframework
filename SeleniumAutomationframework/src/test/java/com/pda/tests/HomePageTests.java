@@ -15,7 +15,6 @@ public final class HomePageTests extends BaseTest{
 	
 	private HomePageTests() {}
 	
-	
 	//Validate whether the title containing Google Search OR google search
 	//Validate whether the title is not null and the length of title is greater than 15 and less than 100
 	//Check links in the page --> Testing
