@@ -6,18 +6,17 @@ public class ExtentManager {
 
 	private ExtentManager() {}
 	
-	private static ThreadLocal<ExtentTest> extTest = new ThreadLocal<>();
+	static ThreadLocal<ExtentTest> extTest = new ThreadLocal<>();
 	
-	public static ExtentTest getExtentTest() {
+	static ExtentTest getExtentTest() { // static access --> it can be only access within the package --> Private package
 		return extTest.get();
 	}
 	
-	public static void setExtentTest(ExtentTest test) {
+	static void setExtentTest(ExtentTest test) {
 		extTest.set(test);
 	}
 	
-	public static void unload() {
+	static void unload() {
 		extTest.remove();
 	}
-	
 }

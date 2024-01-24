@@ -2,6 +2,7 @@ package comp.pda.pages;
 
 import org.openqa.selenium.By;
 import com.pda.Enum.WaitStrategy;
+import com.pda.reports.ExtentLogger;
 import com.pda.reports.ExtentManager;
 import com.pda.reports.ExtentReport;
 
@@ -13,20 +14,19 @@ public final class OrangeHRMHomePage extends BasePage{
 	
 	public OrangeHRMHomePage clickWelcome() {
 		click(linkWelcome, WaitStrategy.PRESENCE);
-		ExtentManager.getExtentTest().pass("Welcome Clicked");
+		ExtentLogger.pass("Welcome Clicked");
 		return this;
 	}
 	
 	public OrangeHRMLoginPage clickLogout() {
 		click(linklogout,WaitStrategy.CLICKABLE);
-		ExtentManager.getExtentTest().pass("Logout Clicked");
+		ExtentLogger.pass("Logout Clicked");
 		return new OrangeHRMLoginPage();
 	}
 	
 	public OrangeHRMHomePage clickDropdown() {
 		click(linkdropdown,WaitStrategy.PRESENCE);
-		ExtentManager.getExtentTest().pass("Dropdown Clicked");
+		ExtentLogger.pass("Dropdown Clicked");
 		return this;
 	}
-	
 }
