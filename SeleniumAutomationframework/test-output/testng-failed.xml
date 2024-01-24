@@ -5,11 +5,9 @@
     <classes>
       <class name="com.pda.tests.OrangeHRMTests">
         <methods>
-          <include name="LoginLogoutTest" invocation-numbers="1"/>
-          <include name="afterSuite"/>
-          <include name="beforeSuite"/>
-          <include name="tearDown"/>
+          <include name="LoginLogoutTest" invocation-numbers="0 1"/>
           <include name="SetUp"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.pda.tests.OrangeHRMTests -->
     </classes>
